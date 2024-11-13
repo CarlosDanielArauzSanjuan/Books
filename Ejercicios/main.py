@@ -1,11 +1,10 @@
-# Ejercicio 16 - Cálculo del tiempo de viaje
+# Ejercicio 17 - Calificaciones con bonificación
+calificacion = float(input("Ingrese una calificación: "))
+tareas = int(input("Realizó tareas adicionales (1 -> Si, 2 -> No): "))
+ 
+if tareas == 1:
+  calificacion += calificacion * 0.05
+  if calificacion > 100:
+    calificacion = 100
 
-import math
-distancia = float(input("Ingrese la distancia en km: "))
-velocidad = float(input("Ingrese la velocidad en km/h: "))
-tiempo = distancia / velocidad
-decimal, entero = math.modf(tiempo)
-tiempoMinutos = decimal * 60
-print("El tiempo de viaje es:", entero, "horas y", round(tiempoMinutos), "minutos")
-if velocidad > 120:
-  print("Advertencia, no exceda los limites de velocidad")
+print("La calificación es:", calificacion)
