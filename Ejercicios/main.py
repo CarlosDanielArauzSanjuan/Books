@@ -1,12 +1,14 @@
-# Ejercicio 4 - Determinar tipo de triangulo
+# Ejercicio 5 - Dias de la semana
 
-l1 = float(input("Ingresa el valor del lado 1: "))
-l2 = float(input("Ingresa el valor del lado 2: "))
-l3 = float(input("Ingresa el valor del lado 3: "))
-
-if(l1==l2 and l2==l3):
-  print("El triangulo es equilatero")
-elif(l1==l2 or l1==l3 or l2==l3):
-  print("El triangulo es isosceles")
-elif(l1!=l2 or l1!=l3 or l2!=l3):
-  print("El triangulo es escaleno")
+dia = int(input("Ingrese un numero del 1 al 7: "))
+def diasDeLaSemana(dia):
+  match dia:
+    case 1: return "Lunes"
+    case 2: return "Martes"
+    case 3: return "Miercoles"
+    case 4: return "Jueves"
+    case 5: return "Viernes"
+    case 6: return "Sabado"
+    case 7: return "Domingo"
+    
+print("El dia de la semana es: ", diasDeLaSemana(dia))
