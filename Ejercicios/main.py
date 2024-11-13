@@ -1,13 +1,13 @@
-# Ejercicio 20 - Conversión de calificaciones numéricas a letras
+#Ejercicio 21 - Sistema de estacionamiento
+horas = int(input("Ingrese el número de horas: "))
+costo = 0
+  
+for i in range(horas):
+  if i == 0:
+    costo += 5
+  elif i >= 1 and i <= 3:
+    costo += 4
+  elif i > 3:
+    costo += 3
  
-calificacion = int(input("Ingrese una calificación: "))
-
-def convertirCalificacion(calificacion):
-  match calificacion:
-    case _ if calificacion < 60: return "F"
-    case _ if calificacion < 70: return "D"
-    case _ if calificacion < 80: return "C"
-    case _ if calificacion < 90: return "B"
-    case _ if calificacion <= 100: return "A"
-    
-print("La calificación es:", convertirCalificacion(calificacion))
+print("El costo del estacionamiento es:", costo)
