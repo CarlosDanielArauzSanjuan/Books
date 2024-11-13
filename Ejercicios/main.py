@@ -1,8 +1,8 @@
 #IterativesStructures
-# Ejercicio 2 - Contador de vocales de una cadena
-cadena = input("Ingrese una cadena: ")
-contador = 0
-for caracter in cadena:
-  if caracter.lower() in "aeiou":
-    contador += 1
-print("La cadena tiene", contador, "vocales")
+# Ejercicio 3 - Factorial de un número
+n = int(input("Ingrese un número entero positivo: "))
+factorial = 1
+for i in range(1, n + 1):
+  factorial *= i
+print("El factorial de", n, "es:", factorial)
+
