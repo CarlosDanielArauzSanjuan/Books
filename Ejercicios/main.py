@@ -1,13 +1,9 @@
- #Ejercicio 6 - Adivinanza
-from random import *
+# Ejercicio 7 - Numero positivo, negativo o cero
 
-num = 0
-aleatorio = randint(1, 10)
-while(num != aleatorio):
-  num = int(input("Adivina el numero del 1 al 10: "))
-  if(num < aleatorio):
-    print("El numero es mayor")
-  else:
-    print("El numero es menor")
-    
-print("Adivinaste el numero, era:", aleatorio)
+num = int(input("Ingrese un numero: "))
+if num < 0:
+  print("El numero es negativo")
+elif num > 0:
+  print("El numero es positivo")
+else:
+  print("El numero es cero")
