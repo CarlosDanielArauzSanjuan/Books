@@ -1,10 +1,15 @@
-# Ejercicio 17 - Calificaciones con bonificación
-calificacion = float(input("Ingrese una calificación: "))
-tareas = int(input("Realizó tareas adicionales (1 -> Si, 2 -> No): "))
- 
-if tareas == 1:
-  calificacion += calificacion * 0.05
-  if calificacion > 100:
-    calificacion = 100
+# Ejercicio 18 - Evaluación de créditos universitarios
 
-print("La calificación es:", calificacion)
+num_materias = int(input("Ingrese el numero de materias cursadas: "))
+aprobadas = 0
+
+for i in range(num_materias):
+  nota = int(input("Ingrese la nota de la materia: "))
+  if nota >= 60:
+    aprobadas += 1
+    print("La materia fue aprobada")
+  else:
+    print("La materia fue reprobada")
+    
+print("La cantidad de materias aprobadas fue:", aprobadas)
+print("El número total de créditos es:", aprobadas * 3)
