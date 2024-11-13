@@ -1,13 +1,16 @@
-# Ejercicio 10 - Clasificacón de notas
+# Ejercicio 11 - Conversión de temperaturas
+ 
+temperatura = float(input("Ingrese una temperatura: "))
+escala = int(input("Ingrese una escala (1 -> C, 2 -> F): "))
 
-nota = int(input("Ingrese una nota: "))
-if nota >= 0 and nota <= 59:
-  print("La calificación es F")
-elif nota >= 60 and nota <= 69:
-  print("La calificación es D")
-elif nota >= 70 and nota <= 79:
-  print("La calificación es C")
-elif nota >= 80 and nota <= 89:
-  print("La calificación es B")
-else:
-  print("La calificación es A")
+def convertirTemp(temperatura, escala):
+  match escala:
+    case 1:
+      return (temperatura * 9/5) + 32
+    case 2:
+      return (temperatura - 32) * 5/9
+
+if escala == 1:
+  print("La temperatura convertida de", temperatura, "C es:", convertirTemp(temperatura, escala), "F")
+else: 
+  print("La temperatura convertida de", temperatura, "F es:", convertirTemp(temperatura, escala), "C")
