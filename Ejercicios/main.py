@@ -1,13 +1,12 @@
-#Ejercicio 21 - Sistema de estacionamiento
-horas = int(input("Ingrese el número de horas: "))
-costo = 0
-  
-for i in range(horas):
-  if i == 0:
-    costo += 5
-  elif i >= 1 and i <= 3:
-    costo += 4
-  elif i > 3:
-    costo += 3
- 
-print("El costo del estacionamiento es:", costo)
+# Ejercicio 22 - Clasificación de triángulos por ángulos
+
+angulo1 = float(input("Ingrese el valor del ángulo 1: "))
+angulo2 = float(input("Ingrese el valor del ángulo 2: "))
+angulo3 = float(input("Ingrese el valor del ángulo 3: "))
+
+if angulo1 < 90 and angulo2 < 90 and angulo3 < 90:
+  print("El triángulo es agudo")
+elif angulo1 == 90 or angulo2 == 90 or angulo3 == 90:
+  print("El triángulo es rectángulo")
+elif angulo1 > 90 or angulo2 > 90 or angulo3 > 90:
+  print("El triángulo es obtuso")
