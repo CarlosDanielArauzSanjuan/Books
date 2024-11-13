@@ -1,7 +1,14 @@
 #IterativesStructures
-# Ejercicio 4 - Pares en un rango
-num1 = int(input("Ingrese el primer número: "))
-num2 = int(input("Ingrese el segundo número: "))
-for i in range(num1, num2 + 1):
-  if i % 2 == 0:
-    print(i)
+# Ejercicio 6 - Adivina el numero (con while)
+from random import *
+
+num = 0
+aleatorio = randint(1, 10)
+while(num != aleatorio):
+  num = int(input("Adivina el numero del 1 al 10: "))
+  if(num < aleatorio):
+    print("El numero es mayor")
+  else:
+    print("El numero es menor")
+    
+print("Adivinaste el numero, era:", aleatorio)
