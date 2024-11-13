@@ -1,20 +1,12 @@
-#Ejercicio 3 - Calculadora Básica:
+# Ejercicio 4 - Determinar tipo de triangulo
 
-num1 = int(input("Ingrese un numero: "))
-num2 = int(input("Ingrese otro numero: "))
-operacion = int(input("Ingrese una operación (1 -> +, 2 -> -, 3 -> *, 4 -> /): "))
+l1 = float(input("Ingresa el valor del lado 1: "))
+l2 = float(input("Ingresa el valor del lado 2: "))
+l3 = float(input("Ingresa el valor del lado 3: "))
 
-def calculadora(num1, num2, operacion):
-  match operacion:
-    case 1:
-      return num1 + num2
-    case 2:
-      return num1 - num2
-    case 3:
-      return num1 * num2
-    case 4:
-      return num1 / num2
-
-print("El resulado de la operación es: ", calculadora(num1, num2, operacion))
-
-
+if(l1==l2 and l2==l3):
+  print("El triangulo es equilatero")
+elif(l1==l2 or l1==l3 or l2==l3):
+  print("El triangulo es isosceles")
+elif(l1!=l2 or l1!=l3 or l2!=l3):
+  print("El triangulo es escaleno")
