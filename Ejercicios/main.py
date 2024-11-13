@@ -1,13 +1,12 @@
-# Ejercicio 12 - Calculadora de IMC
+# Ejercicio 13 - Comparación de 3 números
 
-peso = float(input("Ingrese su peso en kg: "))
-altura = float(input("Ingrese su altura en m: "))
-imc = peso / (altura**2)
-if imc < 18.5:
-  print("Bajo peso")
-elif imc >= 18.5 and imc <= 24.9:
-  print("Peso normal")
-elif imc >= 25 and imc <= 29.9:
-  print("Sobrepeso")
+num1 = int(input("Ingrese un numero: "))
+num2 = int(input("Ingrese otro numero: "))
+num3 = int(input("Ingrese otro numero: "))
+
+if num1 > num2 and num1 > num3:
+  print("El numero", num1, "es el mayor")
+elif num2 > num1 and num2 > num3:
+  print("El numero", num2, "es el mayor")
 else:
-  print("Obesidad")
+  print("El numero", num3, "es el mayor")
