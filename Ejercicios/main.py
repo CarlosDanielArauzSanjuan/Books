@@ -1,16 +1,13 @@
-# Ejercicio 11 - Conversión de temperaturas
- 
-temperatura = float(input("Ingrese una temperatura: "))
-escala = int(input("Ingrese una escala (1 -> C, 2 -> F): "))
+# Ejercicio 12 - Calculadora de IMC
 
-def convertirTemp(temperatura, escala):
-  match escala:
-    case 1:
-      return (temperatura * 9/5) + 32
-    case 2:
-      return (temperatura - 32) * 5/9
-
-if escala == 1:
-  print("La temperatura convertida de", temperatura, "C es:", convertirTemp(temperatura, escala), "F")
-else: 
-  print("La temperatura convertida de", temperatura, "F es:", convertirTemp(temperatura, escala), "C")
+peso = float(input("Ingrese su peso en kg: "))
+altura = float(input("Ingrese su altura en m: "))
+imc = peso / (altura**2)
+if imc < 18.5:
+  print("Bajo peso")
+elif imc >= 18.5 and imc <= 24.9:
+  print("Peso normal")
+elif imc >= 25 and imc <= 29.9:
+  print("Sobrepeso")
+else:
+  print("Obesidad")
