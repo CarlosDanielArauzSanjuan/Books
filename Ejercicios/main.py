@@ -1,15 +1,13 @@
-# Ejercicio 18 - Evaluación de créditos universitarios
+# Ejercicio 20 - Conversión de calificaciones numéricas a letras
+ 
+calificacion = int(input("Ingrese una calificación: "))
 
-num_materias = int(input("Ingrese el numero de materias cursadas: "))
-aprobadas = 0
-
-for i in range(num_materias):
-  nota = int(input("Ingrese la nota de la materia: "))
-  if nota >= 60:
-    aprobadas += 1
-    print("La materia fue aprobada")
-  else:
-    print("La materia fue reprobada")
+def convertirCalificacion(calificacion):
+  match calificacion:
+    case _ if calificacion < 60: return "F"
+    case _ if calificacion < 70: return "D"
+    case _ if calificacion < 80: return "C"
+    case _ if calificacion < 90: return "B"
+    case _ if calificacion <= 100: return "A"
     
-print("La cantidad de materias aprobadas fue:", aprobadas)
-print("El número total de créditos es:", aprobadas * 3)
+print("La calificación es:", convertirCalificacion(calificacion))
