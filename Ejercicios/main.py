@@ -1,6 +1,8 @@
-# Ejercicio 1 - Suma de los primeros n números IterativesStructures
-n = int(input("Ingrese un número positivo: "))
-suma = 0
-for i in range(n + 1):
-  suma += i
-print("La suma de los primeros", n, "números es:", suma)
+#IterativesStructures
+# Ejercicio 2 - Contador de vocales de una cadena
+cadena = input("Ingrese una cadena: ")
+contador = 0
+for caracter in cadena:
+  if caracter.lower() in "aeiou":
+    contador += 1
+print("La cadena tiene", contador, "vocales")
