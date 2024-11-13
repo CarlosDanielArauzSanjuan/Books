@@ -1,35 +1,17 @@
-# Ejercicio 14 - Adivinanza de letras
+# Ejercicio 15 - Cálculo del salario neto
 
-letra = input("Adivina la letra: ")
-secreta = "f"
+sBruto = int(input("Ingrese su salario bruto: "))
+pais = int(input("Ingrese su pais de residencia (1 -> Pais A, 2 -> Pais B, 3 -> Pais C, 4 -> Otro): "))
 
-def adivinarLetra(letra):
-  match letra:
-    case "a": return "Letra incorrecta"
-    case "b": return "Letra incorrecta"
-    case "c": return "Letra incorrecta"
-    case "d": return "Letra incorrecta"
-    case "e": return "Letra incorrecta"
-    case "f": return "Adivinaste"
-    case "g": return "Letra incorrecta"
-    case "h": return "Letra incorrecta"
-    case "i": return "Letra incorrecta"
-    case "j": return "Letra incorrecta"
-    case "k": return "Letra incorrecta"
-    case "l": return "Letra incorrecta"
-    case "m": return "Letra incorrecta"
-    case "n": return "Letra incorrecta"
-    case "o": return "Letra incorrecta"
-    case "p": return "Letra incorrecta"
-    case "q": return "Letra incorrecta"
-    case "r": return "Letra incorrecta"
-    case "s": return "Letra incorrecta"
-    case "t": return "Letra incorrecta"
-    case "u": return "Letra incorrecta"
-    case "v": return "Letra incorrecta"
-    case "w": return "Letra incorrecta"
-    case "x": return "Letra incorrecta"
-    case "y": return "Letra incorrecta"
-    case "z": return "Letra incorrecta"
+def calculadoraSalario(sBruto, pais):
+  match pais:
+    case 1:
+      return sBruto - (sBruto * 0.2)
+    case 2:
+      return sBruto - (sBruto * 0.15)
+    case 3:
+      return sBruto - (sBruto * 0.1)
+    case 4:
+      return sBruto - (sBruto * 0.25)
 
-print(adivinarLetra(letra), "la letra era:", secreta)
+print("El salario Neto es:", calculadoraSalario(sBruto, pais), "$")
