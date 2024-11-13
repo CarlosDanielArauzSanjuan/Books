@@ -1,14 +1,8 @@
 #IterativesStructures
-# Ejercicio 6 - Adivina el numero (con while)
-from random import *
-
-num = 0
-aleatorio = randint(1, 10)
-while(num != aleatorio):
-  num = int(input("Adivina el numero del 1 al 10: "))
-  if(num < aleatorio):
-    print("El numero es mayor")
-  else:
-    print("El numero es menor")
-    
-print("Adivinaste el numero, era:", aleatorio)
+Ejercicio 7 - Suma de numeros pares hasta introducir un impar
+num = int(input("Ingrese un número entero positivo: "))
+suma = 0
+while num % 2 == 0:
+  suma += num
+  num = int(input("Ingrese un número entero positivo: "))
+print("La suma de los números pares es:", suma)
