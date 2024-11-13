@@ -1,9 +1,9 @@
-# Ejercicio 7 - Numero positivo, negativo o cero
 
-num = int(input("Ingrese un numero: "))
-if num < 0:
-  print("El numero es negativo")
-elif num > 0:
-  print("El numero es positivo")
+
+# Ejercicio 8 - Determinar año bisiesto
+
+año = int(input("Ingrese un año: "))
+if año % 4 == 0 and año % 100 != 0 or año % 400 == 0:
+  print("El año es bisiesto")
 else:
-  print("El numero es cero")
+  print("El año no es bisiesto")
